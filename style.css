@@ -172,3 +172,56 @@ html, body {
   text-align: center;
   animation: fadeInUp 1.2s ease-out both;
 }
+
+/* PC版：画面中央固定 + スクロールなし */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* PCではスクロール禁止 */
+  font-family: 'Great Vibes', cursive;
+  background: linear-gradient(to bottom right, #a0cfa9, #2c3e50);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 画面の中央に配置 */
+  padding: 20px;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+/* スマホ対応：縦並び & スクロールあり */
+@media (max-width: 768px) {
+  html, body {
+    overflow: auto; /* スクロール可能に */
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto; /* 画面高さを固定しない */
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .button {
+    width: 80%;
+    font-size: 18px;
+  }
+}
