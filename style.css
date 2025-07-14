@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Great Vibes', cursive;
+  background: linear-gradient(to bottom right, #a0cfa9, #2c3e50);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* コンテナ全体 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+/* プロフィール部分 */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* アイコン画像 */
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transition: transform 0.5s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* SNSアイコン */
+.icons {
+  margin-top: 20px;
+}
+
+.icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #ffd1dc;
+}
+
+/* テキスト＆ボタンエリア */
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.button {
+  display: block;
+  width: 220px;
+  margin: 15px auto;
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.03);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .button {
+    width: 80%;
+    font-size: 18px;
+  }
+}
+
+/* アニメーション */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 適用クラス */
+.animate-slide {
+  animation: slideInLeft 1s ease-out both;
+}
+
+.animate-fade {
+  animation: fadeIn 2s ease-out both;
+}
+/* スクロール防止のために高さを固定 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* ← ここが重要！ */
+  font-family: 'Great Vibes', cursive;
+  background: linear-gradient(to bottom right, #a0cfa9, #2c3e50);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+/* コンテナ全体の高さを画面に合わせて固定 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-out both;
+}
+body {
+  overflow: hidden;
+}
