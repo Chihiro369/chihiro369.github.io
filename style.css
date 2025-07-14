@@ -67,6 +67,12 @@ body {
   margin-bottom: 40px;
 }
 
+.profile, .content {
+  flex: 1 1 300px; /* 最小300px、必要に応じて折り返す */
+  max-width: 100%;
+}
+
+
 .button {
   display: block;
   width: 220px;
@@ -171,4 +177,16 @@ html, body {
   flex-wrap: wrap;
   text-align: center;
   animation: fadeInUp 1.2s ease-out both;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .profile, .content {
+    width: 100%;
+    max-width: 100%;
+  }
 }
