@@ -67,12 +67,6 @@ body {
   margin-bottom: 40px;
 }
 
-.profile, .content {
-  flex: 1 1 300px; /* 最小300px、必要に応じて折り返す */
-  max-width: 100%;
-}
-
-
 .button {
   display: block;
   width: 220px;
@@ -98,11 +92,6 @@ body {
     height: auto;
   }
 
-  .profile, .content {
-    width: 100%;
-    max-width: 100%;
-  }
-}
   .profile-pic {
     width: 220px;
     height: 220px;
@@ -159,21 +148,6 @@ body {
 .animate-fade {
   animation: fadeIn 2s ease-out both;
 }
-
-/* コンテナ全体の高さを画面に合わせて固定 */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* ← ここ変更 */
-  padding: 20px;
-  gap: 50px;
-  flex-wrap: wrap;
-  text-align: center;
-  animation: fadeInUp 1.2s ease-out both;
-}
-
-
 /* スクロール防止のために高さを固定 */
 html, body {
   margin: 0;
@@ -186,8 +160,25 @@ html, body {
   background-attachment: fixed;
   color: white;
 }
+/* コンテナ全体の高さを画面に合わせて固定 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-out both;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
 
-.profile, .content {
+  .profile, .content {
     width: 100%;
     max-width: 100%;
   }
