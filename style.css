@@ -172,6 +172,3 @@ html, body {
   text-align: center;
   animation: fadeInUp 1.2s ease-out both;
 }
-body {
-  overflow: hidden;
-}
