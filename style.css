@@ -172,14 +172,3 @@ html, body {
   text-align: center;
   animation: fadeInUp 1.2s ease-out both;
 }
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .profile, .content {
-    width: 100%;
-    max-width: 100%;
-  }
-}
