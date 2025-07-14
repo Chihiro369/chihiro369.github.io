@@ -160,7 +160,18 @@ body {
   animation: fadeIn 2s ease-out both;
 }
 
-
+/* コンテナ全体の高さを画面に合わせて固定 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-out both;
+}
 
 
 
