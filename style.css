@@ -186,3 +186,8 @@ html, body {
   color: white;
 }
 
+.profile, .content {
+    width: 100%;
+    max-width: 100%;
+  }
+}
